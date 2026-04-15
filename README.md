@@ -7,7 +7,7 @@ A complete **Postman collection** for testing the [GoRest REST API](https://gore
 ## 📁 Repository Structure
 
 ```
-.
+..
 ├── GoRest_API.postman_collection.json   # Postman collection with all tests
 ├── .github/
 │   └── workflows/
