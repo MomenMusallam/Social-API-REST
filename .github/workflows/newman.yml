@@ -29,10 +29,14 @@ jobs:
       - name: Run Postman Collection
         run: |
           newman run GoRest_API.postman_collection.json \
-            --env-var "GOREST_TOKEN=${{ secrets.GOREST_TOKEN }}" \
+            --env-var "accessToken=${{ secrets.GOREST_TOKEN }}" \
+            --env-var "token=${{ secrets.GOREST_TOKEN }}" \
+            --env-var "base_url=https://gorest.co.in/public/v2" \
+            --env-var "url=https://gorest.co.in/public/v2" \
             -r cli,htmlextra \
             --reporter-htmlextra-export newman-report.html \
             --reporter-htmlextra-title "GoRest API Test Report"
+            
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
